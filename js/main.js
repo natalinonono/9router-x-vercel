@@ -76,7 +76,7 @@ document.getElementById("contact-form").addEventListener("submit", function (e) 
     msg.textContent = "\u26A0\uFE0F Format email tidak valid.";
     msg.className = "form-msg err"; return;
   }
-  window.location.href = "mailto:natalino.stefanus@email.com?subject=" +
+  window.location.href = "mailto:stefafusnataliop@gmail.com?subject=" +
     encodeURIComponent("Pesan dari " + nama + " via Portfolio") +
     "&body=" + encodeURIComponent("Nama: " + nama + "\nEmail: " + email + "\n\nPesan:\n" + pesan);
   msg.textContent = "\u2705 Membuka aplikasi email kamu...";
