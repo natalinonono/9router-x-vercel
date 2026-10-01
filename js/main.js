@@ -82,3 +82,14 @@ document.getElementById("contact-form").addEventListener("submit", function (e) 
   msg.textContent = "\u2705 Membuka aplikasi email kamu...";
   msg.className = "form-msg ok"; this.reset();
 });
+
+// ============ GALLERY LIGHTBOX ============
+const lb = document.getElementById("lightbox"),
+      lbImg = document.getElementById("lightbox-img");
+document.querySelectorAll(".g-item img").forEach(img => {
+  img.addEventListener("click", () => { lbImg.src = img.src; lb.classList.add("open"); });
+});
+lb.addEventListener("click", e => {
+  if (e.target === lb || e.target.classList.contains("close-lb")) lb.classList.remove("open");
+});
+addEventListener("keydown", e => { if (e.key === "Escape") lb.classList.remove("open"); });
